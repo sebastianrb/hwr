@@ -1,25 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import { createHashHistory } from 'history';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import Details from "./pages/Details";
-import List from "./pages/List";
+import App from "./components/App";
 
-console.log('React is up and running!');
-
-// const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
+console.log("React is up and running!");
 
 //insert app onto page
 ReactDOM.render(
 	<BrowserRouter>
-		<div className="app-content">
-		    <Switch>
-		       <Route path="/react" component={Details}/>
-		       <Route path="/" component={List}/>
-		    </Switch>
-		</div>
+		<App />
 	</BrowserRouter>,
-    document.getElementById('app')
+	document.getElementById("app")
 );
